@@ -122,6 +122,19 @@ button:hover {
     background-position: 95% 50%;
 }
 
+.error-text {
+    font-size: 12px;
+    font-style: italic;
+    margin-left: auto;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    color: hsl(0, 100%, 74%);
+}
+
+.success {
+    border: 2px solid hsl(154, 59%, 51%);
+}
+
 @media (max-width: 768px) {
     main {
         padding: 40px 20px;

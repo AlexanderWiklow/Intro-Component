@@ -11,6 +11,7 @@ form.addEventListener ('submit', e => {
     var lastName = lname.value.trim();
     var emailValue = email.value.trim();
     var passwordValue = password.value.trim();
+    var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if(firstName === '') {
         errorFunc(fname, 'First name cannot be empty')
@@ -18,6 +19,34 @@ form.addEventListener ('submit', e => {
 
     else {
         successFunc(fname)
+    }
+
+    if(lastName === '') {
+        errorFunc(lname, 'Last name cannot be empty')
+    }
+
+    else {
+        successFunc(lname)
+    }
+
+
+    if(emailValue === '') {
+        errorFunc(email, 'Email cannot be empty')
+    } else if (!emailValue.match(pattern)){
+        errorFunc(email, 'email not correct format')
+    }
+
+    else {
+        successFunc(email)
+    }
+
+
+    if(passwordValue === '') {
+        errorFunc(password, 'Password name cannot be empty')
+    }
+
+    else {
+        successFunc(password)
     }
 } )
 
@@ -27,8 +56,13 @@ function errorFunc(req, message) {
     span.innerText = message; 
     req.className += 'error';
     span.className += 'error-text';
+    if(req !== email){
+        req.value = '';
+    } else {
+        req.style.color = 'hsl(0, 100%, 74%)'
+    }
 }
 
 function successFunc(req) {
-    req.className += 'success' 
+    req.className += 'success';
 }

@@ -31,7 +31,7 @@ main {
     background: url(/images/bg-intro-desktop.png);
     background-color: var(--background);
     background-size: cover;
-    padding: 0px 16px;
+    padding: 0px 160px;
 }
 
 .learn  {
@@ -71,7 +71,6 @@ h1 {
     background-color: #ffff;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 35px;
     border-radius: 8px;
 }
@@ -93,6 +92,7 @@ button {
     text-transform: uppercase;
     background-color: var(--Green);
     font-size: 16px;
+    color: white;
 }
 
 form p {
@@ -132,7 +132,7 @@ button:hover {
 }
 
 .success {
-    border: 2px solid hsl(154, 59%, 51%);
+    border: 2px solid hsl(154, 59%, 51%) ;
 }
 
 @media (max-width: 768px) {
